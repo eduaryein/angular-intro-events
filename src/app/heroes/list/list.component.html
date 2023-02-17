@@ -1,0 +1,12 @@
+<div *ngIf="deletedHero; else nothingWasDeleted">
+    <h3>Heroe borrado <small class="red-text">{{ deletedHero }}</small></h3>
+</div>
+<ng-template #nothingWasDeleted>
+    <h3>No ha borrado nada.</h3>
+</ng-template>
+
+<button class="waves-effect waves-light btn red btn-large" (click)="removeLastHero()" *ngIf="heroeNames.length > 0">Borrar ultimo heroe</button>
+<ul class="collection white p-1" *ngIf="heroeNames.length > 0">
+    <li class="collection-item" 
+    *ngFor="let name of heroeNames">{{ name }}</li>
+</ul>

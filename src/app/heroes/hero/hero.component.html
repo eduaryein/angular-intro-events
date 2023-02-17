@@ -1,0 +1,22 @@
+<ul class="collection">
+    <li class="collection-item avatar">
+      <img src="assets/men.png"  class="circle">
+      <span class="title">{{ name }}</span>
+      <p><b>Nombre: </b> {{ name }} <br>
+         <b>Edad: </b> {{ age }}
+      </p>
+      <p><b>Método: </b> {{ heroDescription() }} <br>
+        <b>Capitalizado: </b> {{ capitalizeName }}
+     </p>
+      
+    </li>
+
+  </ul>
+  
+  <ul>
+    <button *ngIf="hiddenName"
+    class="waves-effect waves-light btn" (click)="changeName()">Cambiar nombre</button>
+    <button *ngIf="hiddenAge"
+    class="waves-effect waves-light btn" (click)="changeAge()">Cambiar edad</button>
+    <button class="waves-effect waves-light btn" (click)="reset()">Reset</button>
+  </ul>
